@@ -5,9 +5,6 @@ export const styles = StyleSheet.create({
     container: {
         paddingLeft: 24,
         paddingRight: 24,
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-start',
     },
     contentInput: {
         width: '100%',
@@ -45,5 +42,10 @@ export const styles = StyleSheet.create({
         marginBottom: 16,
         color: '#fdfcfe',
         fontWeight: '700',
+    },
+    listEmptyText:{
+        fontSize: 14, 
+        color: '#fff',
+        textAlign: 'center',
     }
 });
