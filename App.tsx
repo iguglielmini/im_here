@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import Header from './src/components/Header';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import Evento from './src/pages/Evento';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" translucent backgroundColor="transparent" />
-      <Header title='Nome do evento' dataHora='Sexta, 4 de Novembro de 2022.' />
+      <Evento />
     </SafeAreaView>
   );
 }
