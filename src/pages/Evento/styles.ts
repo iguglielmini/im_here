@@ -42,6 +42,7 @@ export const styles = StyleSheet.create({
     title: {
         fontSize: 20, 
         marginTop: 44,
+        marginBottom: 16,
         color: '#fdfcfe',
         fontWeight: '700',
     }
