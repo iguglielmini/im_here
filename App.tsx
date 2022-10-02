@@ -6,7 +6,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" translucent backgroundColor="transparent" />
-      <Header />
+      <Header title='Nome do evento' dataHora='Sexta, 4 de Novembro de 2022.' />
     </SafeAreaView>
   );
 }

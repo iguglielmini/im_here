@@ -3,11 +3,16 @@ import { View, Text } from 'react-native';
 
  import { styles } from './styles';
 
-const Header: React.FC = () => {
+ interface IHeaderProps {
+  title: string;
+  dataHora: string;
+ }
+
+const Header: React.FC<IHeaderProps> = ({title, dataHora}) => {
   return (
     <View style={styles.container}>
-        <Text style={styles.title}>Nome do evento</Text>
-        <Text style={styles.subtitle}>Sexta, 4 de Novembro de 2022.</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.subtitle}>{dataHora}</Text>
     </View>
   );
 }
