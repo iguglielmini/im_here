@@ -4,7 +4,6 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
     container: {
         marginTop: 48,
-        paddingHorizontal: 24,
     },
     title: {
         fontSize: 24,
