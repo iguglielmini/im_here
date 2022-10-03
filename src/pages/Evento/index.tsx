@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     View,
     Text,
@@ -13,39 +13,29 @@ import Participant from "../../components/Participant";
 import { styles } from "./styles";
 
 export default function Evento() {
-    const participantes = [
-        "Italo",
-        "Isaac",
-        "Vitor",
-        "Lucas",
-        "Robertinho",
-        "Daniely",
-        "Dionisio",
-        "Bebeto",
-        "Didico",
-        "Vinicius",
-        "Allysson",
-    ];
+    const [participants, setParticipants] = useState(['Italo']);
 
     function handleParticipantAdd() {
-        if (participantes.includes("Italo")) {
+        if (participants.includes('Italo')) {
             return Alert.alert(
                 "Participante existe",
                 "Já existe um participante com esse nome."
             );
         }
+
+        setParticipants(prevState => [...prevState,'Ana']);
     }
 
     function handleParticpantRemove(name: string) {
         Alert.alert("Remover", `Remover o participante ${name}?`, [
             {
-                text: 'Sim',
-                onPress: () => Alert.alert("Deletado!")
+                text: "Sim",
+                onPress: () => Alert.alert("Deletado!"),
             },
             {
-                text: 'Não',
-                style: 'cancel'
-            }
+                text: "Não",
+                style: "cancel",
+            },
         ]);
     }
 
@@ -65,7 +55,7 @@ export default function Evento() {
             <Text style={styles.title}>Participantes</Text>
 
             <FlatList
-                data={participantes}
+                data={participants}
                 keyExtractor={(item) => item}
                 renderItem={({ item }) => (
                     <Participant
