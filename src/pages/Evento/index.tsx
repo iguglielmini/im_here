@@ -13,17 +13,19 @@ import Participant from "../../components/Participant";
 import { styles } from "./styles";
 
 export default function Evento() {
-    const [participants, setParticipants] = useState(['Italo']);
+    const [participants, setParticipants] = useState<string[]>([]);
+    const [participantsName, setParticipantsName] = useState('');
 
     function handleParticipantAdd() {
-        if (participants.includes('Italo')) {
+        if (participants.includes(participantsName)) {
             return Alert.alert(
                 "Participante existe",
                 "Já existe um participante com esse nome."
             );
         }
 
-        setParticipants(prevState => [...prevState,'Ana']);
+        setParticipants(prevState => [...prevState, participantsName]);
+        setParticipantsName('');
     }
 
     function handleParticpantRemove(name: string) {
@@ -47,6 +49,8 @@ export default function Evento() {
                     style={styles.input}
                     placeholderTextColor="#6B6B6B"
                     placeholder="Nome do participante"
+                    onChangeText={setParticipantsName}
+                    value={participantsName}
                 />
                 <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
                     <Text style={styles.textButton}>+</Text>
