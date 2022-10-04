@@ -1,0 +1,14 @@
+# I'm Here
+
+Projeto de estudo com expo
+
+
+# Start Project android
+
+- npm i
+- npm run android
+
+# Start Project iOS
+
+- npm i 
+- npm run ios
